@@ -17,9 +17,7 @@ export class SpotifyService {
     });
 
 
-    this._httpClient.get( 'https://api.spotify.com/v1/browse/new-releases',{headers}).subscribe(data =>{
-      console.log(data);
-    });
+    return this._httpClient.get( 'https://api.spotify.com/v1/browse/new-releases',{headers})
 
   }//getNewRealeases
 
