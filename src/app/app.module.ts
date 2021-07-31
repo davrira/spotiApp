@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 
 //RUTAS
 import { ROUTES } from 'src/routes';
@@ -20,7 +21,7 @@ import { SpotifyService } from './services/spotify.service';
 
 //pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
+
 
 @NgModule({
   declarations: [
