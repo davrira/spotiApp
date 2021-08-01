@@ -35,8 +35,15 @@ export class ArtistaComponent implements OnInit {
 
     this._SpotifyService.getArtista(id).subscribe(artista =>{
       this.artista = artista;      
-
+      console.log(artista)
       this.loadingArtist = false;
+
+    })
+  }
+
+
+  gettopTracks(id:string){
+    this._SpotifyService.getTopTracks(id).subscribe(artista =>{
 
     })
   }

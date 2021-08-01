@@ -23,7 +23,6 @@ export class SpotifyService {
 
   }
 
-
   getNewRealeases(){
   
     return this.getQuery("browse/new-releases").pipe(map((data:any) =>{
@@ -32,17 +31,23 @@ export class SpotifyService {
 
   }//getNewRealeases
 
-
   getArtistas(termino:string){
 
     return this.getQuery(`search?q=${termino}&type=artist&limit=15`).pipe(map((data:any)=>{
         return data['artists'].items
       }))
     
-  } 
+  }//getArtistas
 
   getArtista(idArtista:string){
     return this.getQuery(`artists/${idArtista}`);
-  }
+  }//getArtista
+
+  getTopTracks(idArtista:string){        
+    return this.getQuery(`artists/${idArtista}/top-tracks`);
+  }//getTopTrack
+
+
+
 
 }//class
